@@ -33,6 +33,22 @@ export default function Home() {
               Blogs
             </Link>
           </li>
+          <li>
+            <Link
+              href="/products"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+            >
+              Products
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/docs"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+            >
+              Docs
+            </Link>
+          </li>
         </ul>
       </nav>
     </>

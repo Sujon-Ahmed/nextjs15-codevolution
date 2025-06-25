@@ -6,4 +6,5 @@
 - Nested Routes
 - Dynamic Routes
 - Nested Dynamic Routes
+- Catch All Segments
 - Not Found Page
