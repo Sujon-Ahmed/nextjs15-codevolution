@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { blogPosts } from "../lib/blogs";
+import { blogPosts } from "../_lib/blogs";
 
 export default function Blogs() {
   return (

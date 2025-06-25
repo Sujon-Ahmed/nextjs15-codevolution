@@ -1,4 +1,4 @@
-import { products } from "@/app/lib/products";
+import { products } from "@/app/_lib/products";
 import { notFound } from "next/navigation";
 import React from "react";
 
@@ -11,8 +11,13 @@ interface ReviewParams {
 
 const ProductReview = ({ params }: ReviewParams) => {
   const product = products.find((p) => p.id === params.productId);
+  const review = params.reviewId;
 
   if (!product) {
+    notFound();
+  }
+
+  if (!review || review.length <= 6) {
     notFound();
   }
 

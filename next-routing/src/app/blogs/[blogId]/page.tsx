@@ -1,4 +1,4 @@
-import { blogPosts } from "@/app/lib/blogs";
+import { blogPosts } from "@/app/_lib/blogs";
 import { notFound } from "next/navigation";
 
 interface BlogPostProps {
