@@ -24,11 +24,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <header style={{ backgroundColor: "#f0f", textAlign: "center", padding: "20px" }}>
+        <h3 className="text-2xl font-bold text-slate-100">Header</h3>
+      </header>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
+      <footer style={{ backgroundColor: "#333", textAlign: "center", padding: "20px", position: "fixed", width: "100%", bottom: 0 }}>
+        <p className="text-slate-100">Copyright © 2025</p>
+      </footer>
     </html>
   );
 }
