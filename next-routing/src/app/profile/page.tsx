@@ -5,7 +5,7 @@ export default async function Profile() {
         Welcome to the Profile Page
       </h2>
       <p className="text-center mt-5">
-        This page provides information about the user's profile and settings.
+        This page provides information about the user`s profile and settings.
       </p>
     </>
   );

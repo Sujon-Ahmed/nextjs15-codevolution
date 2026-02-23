@@ -1,14 +1,13 @@
 import { blogPosts } from "@/app/_lib/blogs";
 import { notFound } from "next/navigation";
 
-interface BlogPostProps {
-  params: {
-    blogId: string;
-  };
-}
+type BlogPostProps = {
+  params: Promise<{ blogId: string }>;
+};
 
-export default function BlogPostDetails({ params }: BlogPostProps) {
-  const blog = blogPosts.find((b) => b.id === params.blogId);
+export default async function BlogPostDetails({ params }: BlogPostProps) {
+  const { blogId } = await params;
+  const blog = blogPosts.find((b) => b.id === blogId);
 
   if (!blog) {
     notFound();

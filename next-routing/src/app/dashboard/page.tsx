@@ -1,11 +1,12 @@
-import React from "react";
-
-export const BarChart = () => {
-  return <div>Bar Chart</div>;
-};
+import BarChart from "./bar-chart";
 
 const Dashboard = () => {
-  return <h2>Dashboard</h2>;
+  return (
+    <div>
+      <h2>Dashboard</h2>
+      <BarChart />
+    </div>
+  );
 };
 
 export default Dashboard;

@@ -1,7 +1,11 @@
 import React from "react";
 
-const ProductDetails = ({ params }: { params: { productId: string } }) => {
-  const { productId } = params;
+const ProductDetails = async ({
+  params,
+}: {
+  params: Promise<{ productId: string }>;
+}) => {
+  const { productId } = await params;
   return (
     <>
       <h2 className="capitalize text-3xl mt-15 flex items-center justify-center w-full">
