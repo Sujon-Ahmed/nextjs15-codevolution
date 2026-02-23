@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { blogPosts } from "../_lib/blogs";
 
-export default function Blogs() {
+export default async function Blogs() {
+  await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate loading delay
   return (
     <>
       <h2 className="capitalize text-3xl mt-15 flex items-center justify-center w-full">
