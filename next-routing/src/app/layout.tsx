@@ -34,7 +34,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <ErrorWrapper>{children}</ErrorWrapper>
+        {children}
+        {/* <ErrorWrapper>{children}</ErrorWrapper> */}
       </body>
       <footer
         style={{
