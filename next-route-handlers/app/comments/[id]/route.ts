@@ -21,3 +21,15 @@ export async function PATCH(request: Request, {params} : {params: Promise<{id: s
         return new Response(JSON.stringify({error: "Comment not found"}), { status: 404 });
     }
 }
+
+export async function DELETE(_request: Request, {params}: {params: Promise<{id: string}>}) {
+    const {id} = await params;
+    const commentIndex = comments.findIndex(c => c.id === parseInt(id));
+    const deletedComment = comments[commentIndex];
+    if(commentIndex !== -1) {
+        comments.splice(commentIndex, 1);
+        return new Response(JSON.stringify(deletedComment));
+    } else {
+        return new Response(JSON.stringify({error: "Comment not found"}), { status: 404 });
+    }
+}
