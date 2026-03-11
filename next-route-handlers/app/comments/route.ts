@@ -1,7 +1,12 @@
 import { comments } from "./data";
+import { type NextResponse } from "next/server";
 
-export async function GET() {
-    return new Response(JSON.stringify(comments));
+export async function GET(request: NextResponse) {
+    const searchParams = request.nextUrl.searchParams;
+    const query = searchParams.get('query');
+    const fillteredComments = query ? comments.filter(c => c.text.includes(query)) : comments;
+    
+    return Response.json(fillteredComments);
 }
 
 export async function POST(request: Request) {
